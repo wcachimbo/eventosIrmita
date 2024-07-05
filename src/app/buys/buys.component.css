@@ -16,5 +16,98 @@
     width: 50px;
   }
   
+  .cart-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-top: 1em;
+  }
+  
+  form input, form textarea {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    margin-top: 1em;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cart-items {
+    margin-top: 2em;
+  }
+  
+  .cart-items table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .cart-items th, .cart-items td {
+    padding: 0.5em;
+    border: 25px solid #ccc;
+    text-align: left;
+  }
+  
+  
 
+
+  .quantity-input {
+    width: 50px; /* Ajusta el ancho según tus necesidades */
+    padding: 5px;
+    font-size: 14px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
   
