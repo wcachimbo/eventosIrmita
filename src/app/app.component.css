@@ -1,10 +1,25 @@
-.bottom-navigation {
-  display: flex;
-  justify-content: space-around; /* Ajusta el espacio entre los íconos según sea necesario */
-  align-items: center; /* Centra los íconos verticalmente */
-  height: 64px; /* Ajusta la altura de la barra de navegación inferior según sea necesario */
+.mat-toolbar {
+  height: 64px; /* Ajusta la altura de la barra de herramientas según sea necesario */
 }
 
-.bottom-navigation mat-icon {
-  font-size: 24px; /* Ajusta el tamaño de los íconos según sea necesario */
+.toolbar-icon {
+  display: flex; /* Usa display flex para alinear correctamente el ícono */
+  align-items: center; /* Centra verticalmente el ícono */
+  justify-content: center; /* Centra horizontalmente el ícono */
+  width: 100%; /* Asegura que el ícono ocupe todo el ancho disponible */
+}
+/* src/app/app.component.css */
+.toolbar-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -1px;
+  right: 3px;
+  background-color: red;
+  color: white;
+  border-radius: 70%;
+  padding: 5px;
+  font-size: 12px;
 }

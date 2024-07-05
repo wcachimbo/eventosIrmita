@@ -1,6 +1,7 @@
+// src/app/buys/buys.component.ts
 import { Component, OnInit } from '@angular/core';
-import { CartService, CartItem } from '../cart.service';
-import { Observable } from 'rxjs';
+import { CartService } from '../cart.service';
+import { Productos } from '../productos/productos';
 
 @Component({
   selector: 'app-buys',
@@ -8,11 +9,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./buys.component.css']
 })
 export class BuysComponent implements OnInit {
-  items$: Observable<CartItem[]>;
+  items: Productos[] = [];
 
-  constructor(private cartService: CartService) {
-    this.items$ = this.cartService.getItems();
+  constructor(private cartService: CartService) { }
+
+  ngOnInit() {
+    this.items = this.cartService.getItems();
   }
-
-  ngOnInit(): void {}
 }
