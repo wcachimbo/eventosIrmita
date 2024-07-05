@@ -3,5 +3,9 @@
   <div *ngFor="let producto of productos" class="producto">
     <h3>{{ producto.nombre }}</h3>
     <img [src]="producto.imagen" alt="{{ producto.nombre }}">
+    <p class="disponibilidad" [ngClass]="{'disponible': producto.disponibilidad === 'Disponible', 'no-disponible': producto.disponibilidad === 'No disponible'}">
+      {{ producto.disponibilidad }}
+    </p>
+    <button class="add-to-cart-btn" (click)="addToCart(producto)" [disabled]="producto.disponibilidad === 'No disponible'">Add to Cart</button>
   </div>
 </div>

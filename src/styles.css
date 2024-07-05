@@ -31,18 +31,46 @@
 }
 
 /* styles.css (o styles.scss) */
+/* styles.css (o styles.scss) */
 
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cambia el tamaño base según sea necesario */
-  gap: 20px; /* Espacio entre los productos */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .producto {
-  text-align: center; /* Centra el contenido del producto */
+  text-align: center;
 }
 
 .producto img {
-  max-width: 100%; /* Ajusta el ancho máximo de la imagen */
-  height: auto; /* Altura automática según el ancho */
+  max-width: 100%;
+  height: auto;
+}
+
+.add-to-cart-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: darkblue;
+}
+
+.disponibilidad {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.disponible {
+  color: green;
+}
+
+.no-disponible {
+  color: red;
 }
