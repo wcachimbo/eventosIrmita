@@ -1,0 +1,23 @@
+<form>
+  <label for="name">Ingrese nombre cliente:</label>
+  <input type="text" id="name" name="name">
+
+  <label for="phone">Celular del cliente:</label>
+  <input type="text" id="phone" name="phone">
+
+  <label for="address">Dirección del cliente:</label>
+  <input type="text" id="address" name="address">
+
+  <label for="date">Fecha de entrega:</label>
+  <input type="date" id="date" name="date">
+
+  <div *ngFor="let item of items$ | async">
+    <span>{{ item.product.nombre }} - {{ item.quantity }}</span>
+    <button mat-raised-button color="primary">Escoger cantidad</button>
+  </div>
+
+  <label for="description">Descripción del pedido:</label>
+  <textarea id="description" name="description"></textarea>
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

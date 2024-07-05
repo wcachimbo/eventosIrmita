@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
+import { CartService } from './cart.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'eventosIrmita';
+  itemCount$: Observable<number>;
+
+  constructor(private cartService: CartService) {
+    this.itemCount$ = this.cartService.getItemCount();
+  }
 }
+

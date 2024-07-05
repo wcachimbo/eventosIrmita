@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.css (o styles.scss) */
+
+.bottom-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0f0f0; /* Cambia el color de fondo según sea necesario */
+  height: 64px; /* Ajusta la altura según sea necesario */
+}
+
+.bottom-navigation a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px; /* Ajusta el padding según sea necesario */
+}
+
+.bottom-navigation a.active {
+  color: blue; /* Color del icono activo */
+}
+
+.bottom-navigation a.mat-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px;
+}
+
+/* styles.css (o styles.scss) */
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cambia el tamaño base según sea necesario */
+  gap: 20px; /* Espacio entre los productos */
+}
+
+.producto {
+  text-align: center; /* Centra el contenido del producto */
+}
+
+.producto img {
+  max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Altura automática según el ancho */
+}

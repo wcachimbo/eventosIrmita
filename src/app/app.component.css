@@ -1,0 +1,10 @@
+.bottom-navigation {
+  display: flex;
+  justify-content: space-around; /* Ajusta el espacio entre los íconos según sea necesario */
+  align-items: center; /* Centra los íconos verticalmente */
+  height: 64px; /* Ajusta la altura de la barra de navegación inferior según sea necesario */
+}
+
+.bottom-navigation mat-icon {
+  font-size: 24px; /* Ajusta el tamaño de los íconos según sea necesario */
+}

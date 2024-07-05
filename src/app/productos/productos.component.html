@@ -1,0 +1,7 @@
+<!-- productos.component.html -->
+<div class="productos-grid">
+  <div *ngFor="let producto of productos" class="producto">
+    <h3>{{ producto.nombre }}</h3>
+    <img [src]="producto.imagen" alt="{{ producto.nombre }}">
+  </div>
+</div>
