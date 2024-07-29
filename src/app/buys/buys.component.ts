@@ -12,6 +12,13 @@ import { Productos } from '../productos/productos';
 export class BuysComponent implements OnInit {
   checkoutForm: FormGroup;
   items$: Observable<CartItem[]>;
+  filteredBarrios: string[] = [];
+  barrios: string[] = [
+    'Marianos Ramos', 'Republica Israel', 'Valle del Lili', 
+    'Ciudad Córdoba (Mariano Ramos)', 'Ciudad 2000', 'San Judas',
+    'La Unión', 'El Vallado', 'Morichal', 'El Retiro', 
+    'El Vegel', 'Ciudad Córdoba (Gran Colombia)', 'Córdoba Reservado'
+  ];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -22,6 +29,7 @@ export class BuysComponent implements OnInit {
       date: '',
       phone: '',
       address: '',
+      barrio: '',
       description: ''
     });
     this.items$ = this.cartService.items$;
@@ -47,5 +55,22 @@ export class BuysComponent implements OnInit {
     if (product) {
       this.cartService.removeFromCart(product);
     }
+  }
+
+  onBarrioInput(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    if (inputElement) {
+      this.filteredBarrios = this._filterBarrios(inputElement.value);
+    }
+  }
+
+  selectBarrio(barrio: string): void {
+    this.checkoutForm.get('barrio')?.setValue(barrio);
+    this.filteredBarrios = []; // Limpiar sugerencias después de seleccionar un barrio
+  }
+
+  private _filterBarrios(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.barrios.filter(barrio => barrio.toLowerCase().includes(filterValue));
   }
 }

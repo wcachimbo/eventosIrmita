@@ -110,4 +110,32 @@
   button[type="submit"]:hover {
     background-color: #0056b3;
   }
+
+  .barrio-input-container {
+    position: relative;
+  }
+  
+  .dropdown {
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    top: 100%; /* Posiciona la lista justo debajo del campo de entrada */
+    z-index: 1000; /* Asegura que la lista esté encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra para destacar la lista */
+  }
+  
+  .dropdown div {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .dropdown div:hover {
+    background-color: #f1f1f1;
+  }
+  
+  
+
   

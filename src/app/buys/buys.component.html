@@ -16,6 +16,16 @@
     Dirección:
     <input formControlName="address">
   </label>
+  <label class="barrio-input-container">
+    Barrio:
+    <input formControlName="barrio" (input)="onBarrioInput($event)">
+    <div *ngIf="filteredBarrios.length > 0" class="dropdown">
+      <div *ngFor="let barrio of filteredBarrios" (click)="selectBarrio(barrio)">
+        {{ barrio }}
+      </div>
+    </div>
+  </label>
+  
   <label>
     Descripción del pedido:
     <textarea formControlName="description"></textarea>

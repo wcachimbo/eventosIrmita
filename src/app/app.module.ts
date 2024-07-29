@@ -14,6 +14,10 @@ import { AgendadosComponent } from './agendados/agendados.component';
 import { DespachadosComponent } from './despachados/despachados.component';
 import { BuysComponent } from './buys/buys.component';  // <-- Añadir aquí
 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,11 @@ import { BuysComponent } from './buys/buys.component';  // <-- Añadir aquí
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,  // <-- Añadir aquí
-    FormsModule           // <-- Añadir aquí
+    FormsModule,           // <-- Añadir aquí
+    MatFormFieldModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
   ],
   providers: [
     provideClientHydration()
