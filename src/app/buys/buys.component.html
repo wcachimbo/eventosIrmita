@@ -1,35 +1,33 @@
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-  <!-- Campos del formulario -->
-  <label>
-    Ingresar el nombre del cliente:
-    <input formControlName="name">
-  </label>
-  <label>
-    Fecha del pedido:
-    <input type="date" formControlName="date">
-  </label>
-  <label>
-    Celular del cliente:
-    <input formControlName="phone">
-  </label>
-  <label>
-    Dirección:
-    <input formControlName="address">
-  </label>
-  <label class="barrio-input-container">
-    Barrio:
-    <input formControlName="barrio" (input)="onBarrioInput($event)">
-    <div *ngIf="filteredBarrios.length > 0" class="dropdown">
-      <div *ngFor="let barrio of filteredBarrios" (click)="selectBarrio(barrio)">
-        {{ barrio }}
+  <div class="form-row">
+    <div class="form-group">
+      <input placeholder="Ingresar el nombre del cliente" formControlName="name">
+    </div>
+    <div class="form-group">
+      <input placeholder="Fecha del pedido" type="date" formControlName="date">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+      <input placeholder="Celular del cliente" formControlName="phone">
+    </div>
+    <div class="form-group">
+      <input placeholder="Dirección" formControlName="address">
+    </div>
+    <div class="form-group barrio-input-container">
+      <input placeholder="Barrio" formControlName="barrio" (input)="onBarrioInput($event)">
+      <div *ngIf="filteredBarrios.length > 0" class="dropdown">
+        <div *ngFor="let barrio of filteredBarrios" (click)="selectBarrio(barrio)">
+          {{ barrio }}
+        </div>
       </div>
     </div>
-  </label>
-  
-  <label>
-    Descripción del pedido:
-    <textarea formControlName="description"></textarea>
-  </label>
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+      <textarea placeholder="Descripción del pedido" formControlName="description"></textarea>
+    </div>
+  </div>
 
   <h2>Productos en el carrito:</h2>
   <table>
